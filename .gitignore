@@ -1,0 +1,11 @@
+# Sistema
+.DS_Store
+
+# Backups locais (não versionar)
+backup/
+
+# Pasta de deploy gerada (artefato)
+farus-deploy/
+
+# Arquivos auxiliares
+Farus-meta.imagem.png
