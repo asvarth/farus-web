@@ -1,0 +1,142 @@
+<!-- RASCUNHO — requer revisão jurídica antes de divulgar -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Política de Privacidade — Farus</title>
+<meta name="description" content="Política de Privacidade do site farus.ai: quais dados coletamos, para quê, com quem compartilhamos e quais são os seus direitos sob a LGPD.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://farus.ai/privacidade.html">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#E8DCC4">
+<style>
+  @font-face{ font-family:'Fraunces'; font-style:normal; font-weight:300 400; font-display:swap; src:url("fonts/fraunces-latin.woff2") format('woff2'); unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face{ font-family:'Fraunces'; font-style:italic; font-weight:300 400; font-display:swap; src:url("fonts/fraunces-italic-latin.woff2") format('woff2'); unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face{ font-family:'Inter Tight'; font-style:normal; font-weight:400 600; font-display:swap; src:url("fonts/inter-tight-latin.woff2") format('woff2'); unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+
+  :root{
+    --brown:#3D2E26; --cream:#E8DCC4; --cream-soft:#F1E8D4; --terracotta:#B85042;
+    --ink:#1F1612; --rule:rgba(61,46,38,.18); --rule-strong:rgba(61,46,38,.32);
+    --serif:"Fraunces","Iowan Old Style",Georgia,serif;
+    --sans:"Inter Tight","Inter",-apple-system,BlinkMacSystemFont,sans-serif;
+    --maxw:760px;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{ font-family:var(--sans); color:var(--brown); background:var(--cream); font-size:17px; line-height:1.65; -webkit-font-smoothing:antialiased; }
+  a{ color:inherit; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 24px; }
+
+  nav{ border-bottom:1px solid var(--rule); }
+  .nav-inner{ display:flex; justify-content:space-between; align-items:center; padding:18px 0; }
+  .logo img{ height:34px; display:block; }
+  .back{ font-size:14px; text-decoration:none; letter-spacing:.01em; }
+  .back:hover{ color:var(--terracotta); }
+
+  header.page{ padding:64px 0 36px; border-bottom:1px solid var(--rule); }
+  h1{ font-family:var(--serif); font-weight:300; font-size:clamp(34px,5vw,48px); line-height:1.1; color:var(--ink); margin:0 0 14px; letter-spacing:-0.01em; }
+  h1 em{ font-style:italic; color:var(--terracotta); }
+  .updated{ font-size:13.5px; opacity:.7; }
+
+  main{ padding:32px 0 72px; }
+  h2{ font-family:var(--serif); font-weight:400; font-size:24px; color:var(--ink); margin:44px 0 10px; letter-spacing:-0.01em; }
+  p, li{ font-size:16.5px; }
+  ul{ padding-left:22px; }
+  li{ margin-bottom:8px; }
+  .lead{ font-size:18px; }
+  main a{ text-decoration:underline; text-underline-offset:3px; }
+  main a:hover{ color:var(--terracotta); }
+
+  .notice{ border:1px solid var(--rule-strong); background:var(--cream-soft); padding:14px 18px; font-size:14.5px; margin:28px 0 6px; }
+  mark.rev{ background:rgba(184,80,66,.14); color:var(--ink); padding:1px 5px; border-radius:2px; font-size:.92em; }
+
+  footer{ border-top:1px solid var(--rule); padding:32px 0 40px; }
+  .foot-bottom{ display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; font-size:12.5px; opacity:.75; letter-spacing:.01em; }
+  .foot-bottom a{ text-decoration:underline; text-underline-offset:3px; }
+  .foot-bottom a:hover{ color:var(--terracotta); }
+  @media (max-width:560px){ .foot-bottom{ flex-direction:column; align-items:flex-start; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a href="/" class="logo" aria-label="Farus"><img src="assets/farus-logo.png" alt="Farus"></a>
+    <a href="/" class="back">← Voltar ao site</a>
+  </div>
+</nav>
+
+<header class="page">
+  <div class="wrap">
+    <h1>Política de <em>Privacidade</em></h1>
+    <p class="updated">Última atualização: 10 de junho de 2026 · Versão rascunho, sujeita a revisão</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <p class="lead">Esta política explica, em linguagem simples, quais dados pessoais são tratados quando você visita o site <strong>farus.ai</strong>, agenda uma conversa ou testa a ligação demo — e quais são os seus direitos sob a Lei Geral de Proteção de Dados (Lei nº 13.709/2018, LGPD).</p>
+
+    <div class="notice">Os trechos marcados como <mark class="rev">[REVISAR]</mark> e <mark class="rev">[PREENCHER]</mark> dependem de confirmação interna ou jurídica e não devem ser publicados antes dessa revisão.</div>
+
+    <h2>1. Quem somos (controlador)</h2>
+    <p>O controlador dos dados pessoais tratados neste site é <mark class="rev">[PREENCHER: razão social]</mark>, inscrita no CNPJ sob o nº <mark class="rev">[PREENCHER: CNPJ]</mark> ("Farus", "nós"). Canal de contato para assuntos de privacidade: <a href="mailto:contato@farus.ai">contato@farus.ai</a> <mark class="rev">[REVISAR: confirmar se este é o canal oficial de privacidade e se haverá encarregado/DPO nomeado]</mark>.</p>
+
+    <h2>2. Quais dados coletamos</h2>
+    <p><strong>Navegação no site.</strong> Este site não utiliza cookies de rastreamento, pixels de publicidade nem ferramentas de analytics. A infraestrutura de hospedagem pode registrar, em logs técnicos, dados como endereço IP, data e hora de acesso e tipo de navegador, usados apenas para segurança e operação do serviço <mark class="rev">[REVISAR: confirmar provedor de hospedagem e prazo dos logs]</mark>.</p>
+    <p><strong>Agendamento de conversa.</strong> O botão de agendamento direciona para a plataforma Calendly, onde você informa nome, e-mail e horário desejado. Esses dados são tratados pela Calendly em nosso nome para organizar a reunião, conforme a política de privacidade da própria plataforma.</p>
+    <p><strong>Ligação demo.</strong> O botão "Teste agora" inicia uma ligação telefônica comum, do seu aparelho, para o número da demo. Durante a chamada:</p>
+    <ul>
+      <li>sua <strong>voz é processada</strong> pelo nosso agente de inteligência artificial para conduzir a conversa em tempo real;</li>
+      <li>o <strong>número de telefone</strong> de origem pode ser registrado pela operadora e pela nossa infraestrutura de telefonia, como metadado da chamada;</li>
+      <li>a demo é roteirizada para usar <strong>apenas dados fictícios</strong>: antes da ligação, um aviso orienta você a não informar nome, data de nascimento ou qualquer dado real;</li>
+      <li><mark class="rev">[REVISAR: confirmar se as chamadas da demo são gravadas e/ou transcritas, com que finalidade (ex.: qualidade e melhoria do agente) e por quanto tempo ficam armazenadas]</mark>.</li>
+    </ul>
+
+    <h2>3. Para que usamos e com que base legal</h2>
+    <p>Tratamos dados pessoais para as finalidades abaixo, com fundamento no art. 7º da LGPD:</p>
+    <ul>
+      <li><strong>Responder contatos e organizar reuniões</strong> solicitadas por você — procedimentos preliminares a contrato (art. 7º, V);</li>
+      <li><strong>Operar a ligação demo</strong> que você inicia voluntariamente — procedimentos preliminares a contrato (art. 7º, V) e legítimo interesse em demonstrar o produto (art. 7º, IX);</li>
+      <li><strong>Segurança, prevenção a fraude e melhoria do serviço</strong> — legítimo interesse (art. 7º, IX) <mark class="rev">[REVISAR: se houver gravação da demo para treinamento/melhoria, avaliar base legal específica e aviso na própria chamada]</mark>;</li>
+      <li><strong>Cumprimento de obrigações legais ou regulatórias</strong>, quando aplicável (art. 7º, II).</li>
+    </ul>
+
+    <h2>4. Com quem compartilhamos</h2>
+    <p>Não vendemos dados pessoais. Compartilhamos dados apenas com operadores que nos prestam serviço, na medida necessária:</p>
+    <ul>
+      <li>provedores de <strong>infraestrutura de voz e telefonia</strong>, que conectam e processam a ligação demo;</li>
+      <li>provedores de <strong>hospedagem e infraestrutura</strong> do site;</li>
+      <li>plataforma de <strong>agendamento</strong> (Calendly), quando você marca uma conversa.</li>
+    </ul>
+    <p>Alguns desses provedores podem estar localizados fora do Brasil, caso em que a transferência internacional segue os requisitos dos arts. 33 e seguintes da LGPD <mark class="rev">[REVISAR: mapear quais operadores ficam no exterior]</mark>.</p>
+
+    <h2>5. Retenção e exclusão</h2>
+    <p>Mantemos dados pessoais somente pelo tempo necessário às finalidades desta política ou a obrigações legais. Como referência <mark class="rev">[REVISAR: confirmar prazos reais]</mark>: dados de agendamento, pelo período de relacionamento comercial; logs técnicos, por prazo curto definido pelo provedor; áudio e metadados da demo, <mark class="rev">[REVISAR: definir prazo de retenção ou descarte imediato]</mark>. Você pode solicitar a exclusão antecipada a qualquer momento pelo canal indicado na seção 7.</p>
+
+    <h2>6. Seus direitos</h2>
+    <p>Nos termos do art. 18 da LGPD, você pode solicitar: confirmação da existência de tratamento; acesso aos dados; correção de dados incompletos ou desatualizados; anonimização, bloqueio ou eliminação; portabilidade; informação sobre compartilhamentos; e revogação de consentimento, quando o tratamento se basear nele. Também é possível peticionar à Autoridade Nacional de Proteção de Dados (ANPD).</p>
+
+    <h2>7. Como falar com a gente</h2>
+    <p>Para exercer seus direitos ou tirar dúvidas sobre esta política, escreva para <a href="mailto:contato@farus.ai">contato@farus.ai</a>. Responderemos nos prazos da LGPD.</p>
+
+    <h2>8. Atualizações desta política</h2>
+    <p>Esta política pode ser atualizada para refletir mudanças no produto ou na legislação. A versão vigente estará sempre nesta página, com a data de atualização no topo.</p>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot-bottom">
+    <span>© 2026 Farus · [PREENCHER: razão social] · CNPJ [PREENCHER: CNPJ] · <a href="privacidade.html">Política de Privacidade</a></span>
+    <span><a href="mailto:contato@farus.ai">contato@farus.ai</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
