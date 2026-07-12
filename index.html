@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt-BR"><head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Farus — Agente de voz IA para cobrança</title>
-
-<meta name="description" content="Agente de voz com IA para escritórios de cobrança e fintechs. Liga, negocia dentro do CDC e da LGPD e traz o acordo pronto.">
+<meta name="description" content="Agente de voz com IA para escritórios de cobrança e fintechs. Liga, negocia dentro do CDC e da LGPD e traz o acordo pronto." />
 <link rel="canonical" href="https://farus.ai/">
 
 <!-- Open Graph -->
@@ -31,7 +31,6 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#E8DCC4">
-
 <style>/* vietnamese */
 @font-face {
   font-family: 'Fraunces';
@@ -357,6 +356,7 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 </style>
+
 <style>
   :root{
     --brown: #3D2E26;
@@ -815,6 +815,8 @@
     padding: 140px 0;
     perspective: 1600px;
   }
+  /* seg reaproveita .combo, mas a seção acima (diferencial) já tem padding inferior */
+  .combo.seg{ padding-top: 8px; }
   .combo-wrap{
     max-width: 1280px;
     margin: 0 auto;
@@ -908,6 +910,89 @@
       min-height: 480px;
     }
     .combo-legend{ margin-top: 48px; }
+  }
+
+  /* ───────── segurança (texto centralizado) ───────── */
+  .seg{ background: var(--cream); }
+  .seg-head{ max-width: 760px; margin: 0 auto; text-align: center; }
+  .seg-head .section-head{ justify-content: center; }
+  .seg-head .section-title{ margin-bottom: 28px; }
+  .seg-head p{
+    font-size: 16.5px;
+    line-height: 1.62;
+    color: var(--brown);
+    opacity: .88;
+    margin: 0 0 20px;
+  }
+  .seg-head p.closer{
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.3;
+    color: var(--ink);
+    opacity: 1;
+    margin-top: 32px;
+    letter-spacing: -0.02em;
+  }
+
+  /* ───────── painel de controle ───────── */
+  .panel-sec{ padding: 128px 0; background: var(--cream); }
+  /* a seção acima (segurança/combo) já tem padding inferior */
+  .panel-sec{ padding-top: 24px; }
+  .panel-head{ max-width: 720px; margin: 0 auto; text-align: center; }
+  .panel-head .section-head{ justify-content: center; margin-bottom: 28px; }
+  .panel-head .section-title{ margin: 0 0 28px; }
+  .panel-head p{
+    font-size: 16.5px;
+    line-height: 1.62;
+    color: var(--brown);
+    opacity: .88;
+    margin: 0 0 20px;
+  }
+  .panel-head p:last-of-type{ margin-bottom: 0; }
+  .panel-cta{ margin-top: 40px; display: flex; flex-direction: column; align-items: center; gap: 18px; }
+  .panel-cta .line{
+    font-family: var(--serif); font-style: italic; font-weight: 300;
+    font-size: 17px; color: var(--brown); opacity: .8;
+    max-width: 540px; text-wrap: balance;
+  }
+
+  /* browser frame (flat, editorial) */
+  .browser-mock{ max-width: 1040px; margin: 80px auto 0; }
+  .browser{
+    border: 1px solid var(--rule-strong);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--cream-soft);
+    box-shadow: 0 24px 50px -38px rgba(31,22,18,.35);
+  }
+  .browser-bar{
+    display: flex; align-items: center; gap: 7px;
+    padding: 13px 16px;
+    background: #efe6d2;
+    border-bottom: 1px solid var(--rule);
+  }
+  .browser-bar .dot{ width: 10px; height: 10px; border-radius: 50%; }
+  .browser-bar .dot.red{ background: #ED6A5E; }
+  .browser-bar .dot.yellow{ background: #F5BF4F; }
+  .browser-bar .dot.green{ background: #61C554; }
+  .browser-viewport{
+    aspect-ratio: 1.85 / 1;
+    overflow: hidden;
+    background: var(--cream-soft);
+  }
+  .browser-viewport img{
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: top center;
+    display: block;
+  }
+  @media (max-width: 768px){
+    .panel-sec{ padding: 80px 0; }
+    .browser-mock{ margin-top: 48px; }
+    .browser{ border-radius: 10px; }
+    .browser-bar{ padding: 10px 12px; gap: 6px; }
+    .browser-bar .dot{ width: 8px; height: 8px; }
   }
 
   /* ───────── manifesto ───────── */
@@ -1293,6 +1378,137 @@
     font-weight: 500;
   }
 
+  /* ───────── diff: Seu time + a Clara ───────── */
+  .sub-eyebrow{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .sub-eyebrow .bar{
+    width: 36px; height: 1px;
+    background: var(--terracotta);
+  }
+  .clara-grid{
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 72px;
+    align-items: center;
+    margin-bottom: 112px;
+  }
+  .clara-copy .sec-title{
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(30px, 3.4vw, 46px);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin: 0 0 28px;
+    text-wrap: balance;
+  }
+  .clara-copy .sec-title .em-terracotta{ font-weight: 300; }
+  .clara-copy p{
+    font-size: 16.5px;
+    line-height: 1.62;
+    color: var(--brown);
+    opacity: .88;
+    margin: 0 0 20px;
+    max-width: 540px;
+  }
+  .clara-copy p:last-child{ margin-bottom: 0; }
+
+  /* quartil visual */
+  .clara-visual{
+    display: flex;
+    justify-content: center;
+  }
+  .quartil{
+    display: flex;
+    align-items: stretch;
+    gap: 18px;
+    width: 100%;
+    max-width: 420px;
+  }
+  .quartil-bar{
+    width: 132px;
+    flex: none;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .qseg{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 18px;
+  }
+  .qseg .qnum{
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 17px;
+    letter-spacing: -0.01em;
+  }
+  .qseg-ink{
+    background: var(--brown);
+    color: var(--cream);
+  }
+  .qseg-ink + .qseg-ink{ border-top: 1px solid rgba(232,220,196,.22); }
+  .qseg-amber{
+    background: var(--terracotta);
+    color: var(--cream);
+  }
+  .qseg-amber + .qseg-amber{ border-top: 1px solid rgba(31,22,18,.18); }
+  /* divisão mais marcada entre 2º e 3º (grupo de cima x grupo de baixo) */
+  .qseg.qdivide{ border-top: 2px solid var(--cream); }
+  .quartil-groups{
+    flex: 1;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+  .qgroup{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .qbracket{
+    width: 9px;
+    flex: none;
+    align-self: stretch;
+    margin: 16px 0;
+    border-left: 1px solid var(--rule-strong);
+    border-top: 1px solid var(--rule-strong);
+    border-bottom: 1px solid var(--rule-strong);
+  }
+  .qlabel{
+    font-family: var(--sans);
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--brown);
+    opacity: .85;
+  }
+  .qlabel strong{
+    display: block;
+    font-weight: 600;
+    font-size: 13.5px;
+    color: var(--ink);
+    opacity: 1;
+    margin-bottom: 2px;
+  }
+  .qlabel .accent{ color: var(--terracotta); }
+
+  /* diff: divisória entre as duas seções */
+  .diff-divide{
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 0 0 72px;
+  }
+
   /* ───────── vision ───────── */
   .vision{
     background: var(--cream-soft);
@@ -1305,7 +1521,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url("assets/hero-bg.png");
+    background-image: url("assets/vision-herons.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1492,8 +1708,6 @@
     color: var(--brown);
   }
   .foot-links a:hover{ color: var(--terracotta); }
-  .foot-bottom a{ text-decoration: underline; text-underline-offset: 3px; }
-  .foot-bottom a:hover{ color: var(--terracotta); }
   .foot-bottom{
     margin-top: 36px;
     padding-top: 24px;
@@ -1506,6 +1720,26 @@
     opacity: .7;
     letter-spacing: 0.01em;
   }
+  .foot-bottom a{
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(61,46,38,.35);
+    transition: color .2s ease, text-decoration-color .2s ease;
+  }
+  .foot-bottom a:hover{
+    color: var(--terracotta);
+    text-decoration-color: var(--terracotta);
+  }
+  .foot-right{ display: inline-flex; align-items: center; gap: 18px; }
+  .foot-social{ display: inline-flex; align-items: center; gap: 12px; }
+  .foot-social a{
+    display: inline-flex;
+    color: var(--brown);
+    text-decoration: none;
+    transition: color .2s ease, transform .2s ease;
+  }
+  .foot-social a:hover{ color: var(--terracotta); transform: translateY(-1px); }
 
   /* ───────── animation ───────── */
   .fade-up{
@@ -1538,6 +1772,12 @@
     .diff-head{ grid-template-columns: 1fr; gap: 24px; }
     .diff-grid{ grid-template-columns: 1fr; }
     .card{ min-height: auto; }
+    .clara-grid{ grid-template-columns: 1fr; gap: 48px; margin-bottom: 72px; }
+    .clara-copy p{ max-width: none; }
+    .quartil{ max-width: 380px; margin: 0 auto; }
+    .quartil-bar{ height: 340px; }
+    .quartil-groups{ height: 340px; }
+    .diff-divide{ margin-bottom: 48px; }
     .foot-grid{ grid-template-columns: 1fr; text-align: left; gap: 20px; }
     .foot-links{ justify-self: start; }
     .foot-bottom{ flex-direction: column; align-items: flex-start; gap: 8px; }
@@ -1710,6 +1950,47 @@
     .dcn-actions{ flex-direction: column-reverse; }
     .dcn-actions .btn{ width: 100%; justify-content: center; }
   }
+
+  /* ───────── agendar (form modal) ───────── */
+  .dcn-form{ display: flex; flex-direction: column; gap: 16px; margin: 0 0 28px; }
+  .dcn-field{ display: flex; flex-direction: column; gap: 7px; }
+  .dcn-label{
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .01em;
+    color: var(--brown);
+  }
+  .dcn-input{
+    font-family: var(--sans);
+    font-size: 15px;
+    color: var(--ink);
+    background: var(--cream);
+    border: 0.5px solid var(--rule);
+    border-radius: 10px;
+    padding: 12px 14px;
+    width: 100%;
+    transition: border-color .18s ease, box-shadow .18s ease;
+  }
+  .dcn-input::placeholder{ color: var(--brown); opacity: .45; }
+  .dcn-input:focus{
+    outline: none;
+    border-color: var(--terracotta);
+    box-shadow: 0 0 0 3px rgba(184, 80, 66, .12);
+  }
+  .dcn-hp{ position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .dcn-error{ font-family: var(--sans); font-size: 13px; color: var(--terracotta); margin: 0 0 16px; }
+  .dcn-success .dcn-check{
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--terracotta);
+    color: var(--cream-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin: 0 0 20px;
+  }
 </style>
 </head>
 <body>
@@ -1717,14 +1998,14 @@
 <!-- ───────── nav ───────── -->
 <nav class="nav" id="nav" data-screen-label="Nav">
   <div class="wrap nav-inner">
-    <a href="#" class="logo" aria-label="Farus"><img src="assets/farus-logo.png" alt="Farus"></a>
+    <a href="#" class="logo" aria-label="Farus"><img src="assets/farus-logo.png" alt="Farus" /></a>
     <div class="nav-links">
       <a href="#como">Como funciona</a>
       <a href="#diferencial">Diferencial</a>
       <a href="#seguranca">Segurança e compliance</a>
     </div>
     <div class="nav-cta">
-      <a class="btn btn-primary" href="tel:+551150285068" data-demo-call="">Teste agora</a>
+      <a class="btn btn-primary" href="tel:+551150285068" data-demo-call>Ligue e fale com a Clara</a>
     </div>
   </div>
 </nav>
@@ -1739,8 +2020,8 @@
     <h1 class="hero-title fade-up">Agente de voz IA para sua <span class="em-terracotta">cobrança.</span></h1>
     <p class="hero-lead fade-up">Liga, negocia e traz o acordo pronto. Sua operação de voz, automatizada, com score preditivo e compliance brasileiro embutido.</p>
     <div class="hero-ctas fade-up">
-      <a class="btn btn-primary" href="tel:+551150285068" data-demo-call="">Teste agora <span class="arrow">→</span></a>
-      <a class="btn btn-ghost" href="https://calendly.com/eduardogg905/30min" target="_blank" rel="noopener">Agendar conversa</a>
+      <a class="btn btn-primary" href="tel:+551150285068" data-demo-call>Ligue e fale com a Clara <span class="arrow">→</span></a>
+      <button type="button" class="btn btn-ghost" data-agendar>Agendar conversa</button>
     </div>
   </div>
 </header>
@@ -1765,40 +2046,40 @@
           <svg viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <!-- connecting curves to center (160, 148) -->
             <g stroke="#3D2E26" stroke-width="0.8" fill="none" opacity="0.35">
-              <path d="M 60 60 C 90 90, 130 110, 160 148"></path>
-              <path d="M 160 40 C 160 80, 160 110, 160 148"></path>
-              <path d="M 260 60 C 230 90, 190 110, 160 148"></path>
-              <path d="M 40 160 C 80 158, 120 152, 160 148"></path>
-              <path d="M 280 160 C 240 158, 200 152, 160 148"></path>
-              <path d="M 100 240 C 120 210, 140 180, 160 148"></path>
-              <path d="M 220 240 C 200 210, 180 180, 160 148"></path>
+              <path d="M 60 60 C 90 90, 130 110, 160 148" />
+              <path d="M 160 40 C 160 80, 160 110, 160 148" />
+              <path d="M 260 60 C 230 90, 190 110, 160 148" />
+              <path d="M 40 160 C 80 158, 120 152, 160 148" />
+              <path d="M 280 160 C 240 158, 200 152, 160 148" />
+              <path d="M 100 240 C 120 210, 140 180, 160 148" />
+              <path d="M 220 240 C 200 210, 180 180, 160 148" />
             </g>
 
             <!-- peripheral nodes -->
             <g class="anim-float" font-family="Fraunces, serif" font-style="italic" font-size="9" fill="#3D2E26" text-anchor="middle">
-              <g><circle cx="60" cy="60" r="18" fill="none" stroke="#3D2E26" stroke-width="1.2" opacity="0.4"></circle><text x="60" y="63">CRM</text></g>
-              <g><circle cx="160" cy="40" r="18" fill="none" stroke="#3D2E26" stroke-width="1.2" opacity="0.4"></circle><text x="160" y="43">ERP</text></g>
-              <g><circle cx="260" cy="60" r="18" fill="none" stroke="#3D2E26" stroke-width="1.2" opacity="0.4"></circle><text x="260" y="63">API</text></g>
-              <g><circle cx="40" cy="160" r="18" fill="none" stroke="#3D2E26" stroke-width="1.2" opacity="0.4"></circle><text x="40" y="163">XLS</text></g>
-              <g><circle cx="280" cy="160" r="18" fill="none" stroke="#3D2E26" stroke-width="1.2" opacity="0.4"></circle><text x="280" y="163">SQL</text></g>
-              <g><circle cx="100" cy="240" r="18" fill="none" stroke="#3D2E26" stroke-width="1.2" opacity="0.4"></circle><text x="100" y="243">CSV</text></g>
-              <g><circle cx="220" cy="240" r="18" fill="none" stroke="#3D2E26" stroke-width="1.2" opacity="0.4"></circle><text x="220" y="243">PDF</text></g>
+              <g><circle cx="60" cy="60" r="18" fill="none" stroke="#3D2E26" stroke-width="1.2" opacity="0.4"/><text x="60" y="63">CRM</text></g>
+              <g><circle cx="160" cy="40" r="18" fill="none" stroke="#3D2E26" stroke-width="1.2" opacity="0.4"/><text x="160" y="43">ERP</text></g>
+              <g><circle cx="260" cy="60" r="18" fill="none" stroke="#3D2E26" stroke-width="1.2" opacity="0.4"/><text x="260" y="63">API</text></g>
+              <g><circle cx="40" cy="160" r="18" fill="none" stroke="#3D2E26" stroke-width="1.2" opacity="0.4"/><text x="40" y="163">XLS</text></g>
+              <g><circle cx="280" cy="160" r="18" fill="none" stroke="#3D2E26" stroke-width="1.2" opacity="0.4"/><text x="280" y="163">SQL</text></g>
+              <g><circle cx="100" cy="240" r="18" fill="none" stroke="#3D2E26" stroke-width="1.2" opacity="0.4"/><text x="100" y="243">CSV</text></g>
+              <g><circle cx="220" cy="240" r="18" fill="none" stroke="#3D2E26" stroke-width="1.2" opacity="0.4"/><text x="220" y="243">PDF</text></g>
             </g>
 
             <!-- decorative outer rings -->
-            <circle cx="160" cy="148" r="52" fill="none" stroke="#B85042" stroke-width="0.8" opacity="0.1"></circle>
-            <circle cx="160" cy="148" r="42" fill="none" stroke="#B85042" stroke-width="0.8" opacity="0.2"></circle>
+            <circle cx="160" cy="148" r="52" fill="none" stroke="#B85042" stroke-width="0.8" opacity="0.1"/>
+            <circle cx="160" cy="148" r="42" fill="none" stroke="#B85042" stroke-width="0.8" opacity="0.2"/>
             <!-- central hub -->
-            <circle cx="160" cy="148" r="32" fill="#3D2E26"></circle>
-            <circle cx="160" cy="148" r="32" fill="none" stroke="#B85042" stroke-width="1" opacity="0.4"></circle>
+            <circle cx="160" cy="148" r="32" fill="#3D2E26"/>
+            <circle cx="160" cy="148" r="32" fill="none" stroke="#B85042" stroke-width="1" opacity="0.4"/>
             <text x="160" y="154" font-family="Fraunces, serif" font-style="italic" font-size="14" fill="#E8DCC4" text-anchor="middle">f</text>
 
             <!-- pulsing dots -->
             <g class="anim-pulse">
-              <circle cx="118" cy="115" r="2" fill="#B85042"></circle>
-              <circle cx="200" cy="115" r="2" fill="#B85042"></circle>
-              <circle cx="135" cy="180" r="2" fill="#B85042"></circle>
-              <circle cx="185" cy="180" r="2" fill="#B85042"></circle>
+              <circle cx="118" cy="115" r="2" fill="#B85042"/>
+              <circle cx="200" cy="115" r="2" fill="#B85042"/>
+              <circle cx="135" cy="180" r="2" fill="#B85042"/>
+              <circle cx="185" cy="180" r="2" fill="#B85042"/>
             </g>
           </svg>
           <div class="mockup-tag">captura</div>
@@ -1813,11 +2094,11 @@
           <svg viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <!-- horizontal grid -->
             <g stroke="#3D2E26" stroke-width="0.4" opacity="0.1">
-              <line x1="40" y1="60" x2="280" y2="60"></line>
-              <line x1="40" y1="100" x2="280" y2="100"></line>
-              <line x1="40" y1="140" x2="280" y2="140"></line>
-              <line x1="40" y1="180" x2="280" y2="180"></line>
-              <line x1="40" y1="220" x2="280" y2="220"></line>
+              <line x1="40" y1="60" x2="280" y2="60"/>
+              <line x1="40" y1="100" x2="280" y2="100"/>
+              <line x1="40" y1="140" x2="280" y2="140"/>
+              <line x1="40" y1="180" x2="280" y2="180"/>
+              <line x1="40" y1="220" x2="280" y2="220"/>
             </g>
             <!-- y-axis labels -->
             <g font-family="Inter Tight, sans-serif" font-size="8" fill="#3D2E26" opacity="0.5" text-anchor="end">
@@ -1827,35 +2108,35 @@
             </g>
 
             <!-- threshold line -->
-            <line x1="40" y1="135" x2="280" y2="135" stroke="#B85042" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.7"></line>
+            <line x1="40" y1="135" x2="280" y2="135" stroke="#B85042" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.7"/>
             <text x="280" y="130" font-family="Fraunces, serif" font-style="italic" font-size="9" fill="#B85042" text-anchor="end">threshold</text>
 
             <!-- bars (baseline y=222) -->
             <g fill="#3D2E26">
-              <rect x="50" y="80" width="14" height="142" rx="2" opacity="1"></rect>
-              <rect x="70" y="86" width="14" height="136" rx="2" opacity="1"></rect>
-              <rect x="90" y="94" width="14" height="128" rx="2" opacity="1"></rect>
-              <rect x="110" y="110" width="14" height="112" rx="2" opacity="0.75"></rect>
-              <rect x="130" y="120" width="14" height="102" rx="2" opacity="0.70"></rect>
-              <rect x="150" y="130" width="14" height="92" rx="2" opacity="0.65"></rect>
-              <rect x="170" y="142" width="14" height="80" rx="2" opacity="0.55"></rect>
-              <rect x="190" y="160" width="14" height="62" rx="2" opacity="0.40"></rect>
-              <rect x="210" y="174" width="14" height="48" rx="2" opacity="0.30"></rect>
-              <rect x="230" y="188" width="14" height="34" rx="2" opacity="0.22"></rect>
-              <rect x="250" y="200" width="14" height="22" rx="2" opacity="0.18"></rect>
+              <rect x="50" y="80"  width="14" height="142" rx="2" opacity="1"/>
+              <rect x="70" y="86"  width="14" height="136" rx="2" opacity="1"/>
+              <rect x="90" y="94"  width="14" height="128" rx="2" opacity="1"/>
+              <rect x="110" y="110" width="14" height="112" rx="2" opacity="0.75"/>
+              <rect x="130" y="120" width="14" height="102" rx="2" opacity="0.70"/>
+              <rect x="150" y="130" width="14" height="92"  rx="2" opacity="0.65"/>
+              <rect x="170" y="142" width="14" height="80"  rx="2" opacity="0.55"/>
+              <rect x="190" y="160" width="14" height="62"  rx="2" opacity="0.40"/>
+              <rect x="210" y="174" width="14" height="48"  rx="2" opacity="0.30"/>
+              <rect x="230" y="188" width="14" height="34"  rx="2" opacity="0.22"/>
+              <rect x="250" y="200" width="14" height="22"  rx="2" opacity="0.18"/>
             </g>
 
             <!-- x-axis baseline -->
-            <line x1="40" y1="222" x2="280" y2="222" stroke="#3D2E26" stroke-width="0.8" opacity="0.4"></line>
+            <line x1="40" y1="222" x2="280" y2="222" stroke="#3D2E26" stroke-width="0.8" opacity="0.4"/>
 
             <!-- highlighted point -->
             <g class="anim-pulse">
-              <circle cx="77" cy="84" r="3" fill="#B85042"></circle>
+              <circle cx="77" cy="84" r="3" fill="#B85042"/>
             </g>
 
             <!-- badge "94% chance de atender" -->
             <g transform="translate(14, 38)">
-              <rect width="122" height="22" rx="11" fill="#3D2E26"></rect>
+              <rect width="122" height="22" rx="11" fill="#3D2E26"/>
               <text x="61" y="14" font-family="Inter Tight, sans-serif" font-size="9" font-weight="500" fill="#E8DCC4" text-anchor="middle">94% chance de atender</text>
             </g>
 
@@ -1874,16 +2155,16 @@
           <svg viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <!-- Avatar + identity (top-left) -->
             <g transform="translate(18, 22)">
-              <circle cx="14" cy="14" r="14" fill="none" stroke="#3D2E26" stroke-width="1" opacity="0.5"></circle>
-              <circle cx="14" cy="11" r="4" fill="#3D2E26" opacity="0.45"></circle>
-              <path d="M 6 23 C 7 18, 21 18, 22 23 L 22 26 L 6 26 Z" fill="#3D2E26" opacity="0.45"></path>
+              <circle cx="14" cy="14" r="14" fill="none" stroke="#3D2E26" stroke-width="1" opacity="0.5"/>
+              <circle cx="14" cy="11" r="4" fill="#3D2E26" opacity="0.45"/>
+              <path d="M 6 23 C 7 18, 21 18, 22 23 L 22 26 L 6 26 Z" fill="#3D2E26" opacity="0.45"/>
               <text x="36" y="14" font-family="Fraunces, serif" font-size="12" fill="#3D2E26">Maria Silva</text>
               <text x="36" y="25" font-family="Inter Tight, sans-serif" font-size="7.5" fill="#3D2E26" opacity="0.5">Devedor · 47 anos · São Paulo</text>
             </g>
 
             <!-- Proposta atual (top-right) -->
             <g transform="translate(196, 16)">
-              <rect width="108" height="44" rx="6" fill="#F1E8D4" stroke="#3D2E26" stroke-width="0.5" opacity="0.9"></rect>
+              <rect width="108" height="44" rx="6" fill="#F1E8D4" stroke="#3D2E26" stroke-width="0.5" opacity="0.9"/>
               <text x="9" y="13" font-family="Inter Tight, sans-serif" font-size="6.5" fill="#3D2E26" opacity="0.55" letter-spacing="0.14em">PROPOSTA ATUAL</text>
               <text x="9" y="26" font-family="Inter Tight, sans-serif" font-size="9" fill="#3D2E26">4x sem juros</text>
               <text x="9" y="38" font-family="Inter Tight, sans-serif" font-size="9" font-style="italic" fill="#B85042">+ 5% de desconto</text>
@@ -1895,27 +2176,27 @@
 
             <!-- Waveform -->
             <g fill="#B85042" class="anim-pulse">
-              <rect x="86" y="162" width="3" height="8" rx="1.5"></rect>
-              <rect x="96" y="156" width="3" height="20" rx="1.5"></rect>
-              <rect x="106" y="148" width="3" height="36" rx="1.5"></rect>
-              <rect x="116" y="154" width="3" height="24" rx="1.5"></rect>
-              <rect x="126" y="142" width="3" height="48" rx="1.5"></rect>
-              <rect x="136" y="150" width="3" height="32" rx="1.5"></rect>
-              <rect x="146" y="138" width="3" height="56" rx="1.5"></rect>
-              <rect x="156" y="146" width="3" height="40" rx="1.5"></rect>
-              <rect x="166" y="140" width="3" height="52" rx="1.5"></rect>
-              <rect x="176" y="150" width="3" height="32" rx="1.5"></rect>
-              <rect x="186" y="144" width="3" height="44" rx="1.5"></rect>
-              <rect x="196" y="154" width="3" height="24" rx="1.5"></rect>
-              <rect x="206" y="160" width="3" height="12" rx="1.5"></rect>
-              <rect x="216" y="164" width="3" height="6" rx="1.5"></rect>
+              <rect x="86"  y="162" width="3" height="8"  rx="1.5"/>
+              <rect x="96"  y="156" width="3" height="20" rx="1.5"/>
+              <rect x="106" y="148" width="3" height="36" rx="1.5"/>
+              <rect x="116" y="154" width="3" height="24" rx="1.5"/>
+              <rect x="126" y="142" width="3" height="48" rx="1.5"/>
+              <rect x="136" y="150" width="3" height="32" rx="1.5"/>
+              <rect x="146" y="138" width="3" height="56" rx="1.5"/>
+              <rect x="156" y="146" width="3" height="40" rx="1.5"/>
+              <rect x="166" y="140" width="3" height="52" rx="1.5"/>
+              <rect x="176" y="150" width="3" height="32" rx="1.5"/>
+              <rect x="186" y="144" width="3" height="44" rx="1.5"/>
+              <rect x="196" y="154" width="3" height="24" rx="1.5"/>
+              <rect x="206" y="160" width="3" height="12" rx="1.5"/>
+              <rect x="216" y="164" width="3" height="6"  rx="1.5"/>
             </g>
 
             <!-- Em chamada pill -->
             <g transform="translate(94, 208)">
-              <rect width="132" height="22" rx="11" fill="#3D2E26"></rect>
+              <rect width="132" height="22" rx="11" fill="#3D2E26"/>
               <circle cx="12" cy="11" r="3" fill="#B85042">
-                <animate attributeName="opacity" values="1;0.3;1" dur="1.4s" repeatCount="indefinite"></animate>
+                <animate attributeName="opacity" values="1;0.3;1" dur="1.4s" repeatCount="indefinite"/>
               </circle>
               <text x="22" y="14.5" font-family="Inter Tight, sans-serif" font-size="9" fill="#E8DCC4">Em chamada · IA ativa</text>
             </g>
@@ -1923,18 +2204,18 @@
             <!-- Compliance checks -->
             <g transform="translate(118, 252)" class="anim-pulse" font-family="Inter Tight, sans-serif" font-size="7.5" fill="#3D2E26">
               <g>
-                <circle cx="5" cy="0" r="5" fill="#B85042" opacity="0.9"></circle>
-                <path d="M 2.5 0 L 4.5 2 L 7.5 -1.5" stroke="#E8DCC4" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                <circle cx="5" cy="0" r="5" fill="#B85042" opacity="0.9"/>
+                <path d="M 2.5 0 L 4.5 2 L 7.5 -1.5" stroke="#E8DCC4" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
                 <text x="13" y="3">Horário</text>
               </g>
               <g transform="translate(58, 0)">
-                <circle cx="5" cy="0" r="5" fill="#B85042" opacity="0.9"></circle>
-                <path d="M 2.5 0 L 4.5 2 L 7.5 -1.5" stroke="#E8DCC4" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                <circle cx="5" cy="0" r="5" fill="#B85042" opacity="0.9"/>
+                <path d="M 2.5 0 L 4.5 2 L 7.5 -1.5" stroke="#E8DCC4" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
                 <text x="13" y="3">LGPD ✓</text>
               </g>
               <g transform="translate(122, 0)">
-                <circle cx="5" cy="0" r="5" fill="#B85042" opacity="0.9"></circle>
-                <path d="M 2.5 0 L 4.5 2 L 7.5 -1.5" stroke="#E8DCC4" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+                <circle cx="5" cy="0" r="5" fill="#B85042" opacity="0.9"/>
+                <path d="M 2.5 0 L 4.5 2 L 7.5 -1.5" stroke="#E8DCC4" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
                 <text x="13" y="3">Tom</text>
               </g>
             </g>
@@ -1956,58 +2237,56 @@
       <span class="bar"></span>
       <span class="eyebrow">02 · Diferencial</span>
     </div>
-    <div class="diff-head">
-      <h2 class="section-title fade-up">Farus vs <span class="em-terracotta">alternativas atuais</span></h2>
-      <p class="fade-up">Como nossa plataforma se diferencia de cobradores humanos e ferramentas genéricas adaptadas para cobrança.</p>
+
+    <!-- sub 1 — Seu time + a Clara -->
+    <div class="clara-grid">
+      <div class="clara-copy">
+        <div class="sub-eyebrow fade-up">
+          <span class="bar"></span>
+          <span class="eyebrow">Seu time + a Clara</span>
+        </div>
+        <h2 class="sec-title fade-up">Fique com os seus <span class="em-terracotta">melhores.</span> A Clara cuida do resto.</h2>
+        <p class="fade-up">Nem toda dívida pede a mesma cobrança. Seu time fica com o topo da carteira, os casos que pedem conversa humana. A Clara assume o resto: a metade mais difícil, onde a rotatividade mais castiga, atendente novo a toda hora, treinamento sem fim, qualidade que oscila, o seu melhor cobrador se desgastando no que menos rende.</p>
+        <p class="fade-up">A Clara não cansa, não tem dia ruim e não pede demissão. Entrega a mesma negociação, no mesmo tom e dentro do compliance, da primeira à milésima ligação. O resultado: seu time rende mais no que importa, e a parte da carteira que ninguém atendia bem, hoje um custo invisível, volta a recuperar.</p>
+      </div>
+
+      <div class="clara-visual fade-up">
+        <div class="quartil" aria-hidden="true">
+          <div class="quartil-bar">
+            <div class="qseg qseg-ink"><span class="qnum">1º</span></div>
+            <div class="qseg qseg-ink"><span class="qnum">2º</span></div>
+            <div class="qseg qseg-amber qdivide"><span class="qnum">3º</span></div>
+            <div class="qseg qseg-amber"><span class="qnum">4º</span></div>
+          </div>
+          <div class="quartil-groups">
+            <div class="qgroup qgroup-top">
+              <span class="qbracket"></span>
+              <span class="qlabel"><strong>Seu time</strong>os melhores casos</span>
+            </div>
+            <div class="qgroup qgroup-bottom">
+              <span class="qbracket"></span>
+              <span class="qlabel"><strong class="accent">Clara</strong>qualidade constante, sem rotatividade</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="diff-grid">
-      <article class="card fade-up">
-        <div class="icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 3 L20 6 V12 C20 16.5 16.5 19.8 12 21 C7.5 19.8 4 16.5 4 12 V6 Z"></path>
-            <path d="M9 12 L11.2 14.2 L15 10.4"></path>
-          </svg>
-        </div>
-        <h3><em>vs</em> Cobrador humano</h3>
-        <p>Cobrador humano liga 50 vezes por dia. A IA liga 5.000. Mesma negociação, mesmo tom, todas auditáveis, sem dia ruim. Seu cobrador continua. Agora focado nos casos que valem o tempo dele.</p>
-        <div class="card-foot">i — escala e consistência</div>
-      </article>
+    <hr class="diff-divide" />
 
-      <article class="card fade-up">
-        <div class="icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 19 L9 13 L13 16 L20 7"></path>
-            <path d="M15 7 L20 7 L20 12"></path>
-            <circle cx="9" cy="13" r=".9" fill="currentColor" stroke="none"></circle>
-            <circle cx="13" cy="16" r=".9" fill="currentColor" stroke="none"></circle>
-          </svg>
-        </div>
-        <h3><em>vs</em> Régua automatizada</h3>
-        <p>SMS, email e WhatsApp automatizados notificam. Não negociam. Devedor lê e ignora. Voz IA conversa, ouve a situação e propõe alternativa em tempo real. Cobrança que recupera é cobrança que negocia, não que notifica.</p>
-        <div class="card-foot">ii — conversa que negocia</div>
-      </article>
-
-      <article class="card fade-up">
-        <div class="icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 7 C 5 5.3 6.3 4 8 4 L16 4 C 17.7 4 19 5.3 19 7 L19 13 C 19 14.7 17.7 16 16 16 L11 16 L7 20 L7 16 C 5.9 16 5 15.1 5 14 Z"></path>
-            <path d="M9 9 L15 9 M9 12 L13 12"></path>
-          </svg>
-        </div>
-        <h3><em>vs</em> Continuar como está</h3>
-        <p>Sua operação atual funciona até descobrir quanto deixa de recuperar. Carteiras nunca trabalhadas por falta de tempo. Devedores que pagariam, mas ninguém liga. O custo do status quo é invisível, e é o maior.</p>
-        <div class="card-foot">iii — custo de não mudar</div>
-      </article>
+    <!-- sub 2 — Voz que negocia, não só notifica -->
+    <div class="diff-head">
+      <h2 class="section-title fade-up">Voz que <span class="em-terracotta">negocia</span>, não só notifica.</h2>
+      <p class="fade-up">SMS, email e WhatsApp automatizados notificam. Não negociam. Devedor lê e ignora. Voz IA conversa, ouve a situação e propõe alternativa em tempo real. Cobrança que recupera é cobrança que negocia, não que notifica.</p>
     </div>
   </div>
 </section>
 
-<!-- ───────── manifesto × live call (combo) ───────── -->
-<section class="combo" id="seguranca" aria-label="Segurança e compliance" data-screen-label="Segurança + Live Call">
+<!-- ───────── segurança e compliance ───────── -->
+<section class="combo seg" id="seguranca" data-screen-label="Segurança e compliance">
   <div class="combo-wrap">
     <div class="combo-grid">
-      <!-- LEFT: segurança e compliance -->
+      <!-- LEFT: texto -->
       <div class="combo-left manifesto manifesto-inline">
         <div class="manifesto-inner">
           <div class="manifesto-eyebrow fade-up">
@@ -2021,7 +2300,7 @@
         </div>
       </div>
 
-      <!-- RIGHT: live call stage -->
+      <!-- RIGHT: painel ilustrativo de chamada -->
       <div class="combo-right stage stage-inline">
         <div class="stage-wrap fade-up">
           <div class="stage-card">
@@ -2058,7 +2337,38 @@
         </div>
       </div>
     </div>
-    <p class="combo-legend fade-up">Cada chamada acompanhada em tempo real. Cada decisão auditável.</p>
+  </div>
+</section>
+
+<!-- ───────── painel de controle ───────── -->
+<section class="panel-sec" id="painel" data-screen-label="Painel de controle">
+  <div class="wrap">
+    <div class="panel-head">
+      <div class="section-head fade-up">
+        <span class="bar"></span>
+        <span class="eyebrow">Painel de controle</span>
+      </div>
+      <h2 class="section-title fade-up">A Clara liga. Você <span class="em-terracotta">acompanha tudo.</span></h2>
+      <p class="fade-up">Toda ligação fica gravada, transcrita e auditável. Em cada uma, você vê exatamente o que a Clara entendeu, se confirmou a identidade, se o devedor topou pagar, qual proposta foi feita, e o que o sistema decidiu, com o score e a janela de compliance daquela chamada.</p>
+      <p class="fade-up">Casos fora do padrão caem numa fila de revisão pra olho humano. As regras são suas, definidas por carteira. Nada acontece fora da política. Você não terceiriza só a ligação, mantém o controle, com tudo à vista.</p>
+      <div class="panel-cta fade-up">
+        <span class="line">Ligue e fale com a Clara agora, e veja o tipo de conversa que vira esse registro.</span>
+        <a class="btn btn-primary" href="tel:+551150285068" data-demo-call>Ligue e fale com a Clara <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="browser-mock fade-up">
+      <div class="browser">
+        <div class="browser-bar" aria-hidden="true">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <div class="browser-viewport">
+          <img src="assets/farus-dashboard-demo.png" alt="Painel da Farus: lista de ligações e auditoria do que a Clara captou e o sistema decidiu" />
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -2066,20 +2376,28 @@
 <section class="final" id="contato" data-screen-label="CTA Final">
   <div class="wrap">
     <p class="final-quote fade-up">“Toda dívida começa com um pacto. Cobrança é o trabalho de honrar esse pacto, <span class="em-terracotta">para os dois lados.</span>”</p>
-    <h2 class="fade-up">Vamos <span class="circled"><svg class="circle-svg" viewBox="0 0 1200 600" preserveAspectRatio="none" aria-hidden="true"><path d="M 950 90 C 1250 300, 1050 480, 600 520 C 250 520, 150 480, 150 300 C 150 120, 350 80, 600 80 C 850 80, 950 180, 950 180"></path></svg><span class="em-terracotta">conversar</span></span>.</h2>
+    <h2 class="fade-up">Vamos <span class="circled"><svg class="circle-svg" viewBox="0 0 1200 600" preserveAspectRatio="none" aria-hidden="true"><path d="M 950 90 C 1250 300, 1050 480, 600 520 C 250 520, 150 480, 150 300 C 150 120, 350 80, 600 80 C 850 80, 950 180, 950 180" /></svg><span class="em-terracotta">conversar</span></span>.</h2>
     <p class="fade-up">Se a sua operação se conecta com o que descrevemos, teste agora ou marque uma conversa.</p>
     <div class="final-ctas fade-up">
-      <a class="btn btn-primary" href="tel:+551150285068" data-demo-call="">Teste agora <span class="arrow">→</span></a>
-      <a class="btn btn-ghost" href="https://calendly.com/eduardogg905/30min" target="_blank" rel="noopener">Agendar conversa</a>
+      <a class="btn btn-primary" href="tel:+551150285068" data-demo-call>Ligue e fale com a Clara <span class="arrow">→</span></a>
+      <button type="button" class="btn btn-ghost" data-agendar>Agendar conversa</button>
     </div>
   </div>
 </section>
+
+<!-- ───────── netlify forms detection (oculto, não renderiza) ───────── -->
+<form name="agendar" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="text" name="name" />
+  <input type="email" name="email" />
+  <input type="text" name="empresa" />
+  <input type="text" name="bot-field" />
+</form>
 
 <!-- ───────── footer ───────── -->
 <footer data-screen-label="Footer">
   <div class="wrap">
     <div class="foot-grid">
-      <a href="#" class="logo foot-logo" aria-label="Farus"><img src="assets/farus-logo.png" alt="Farus"></a>
+      <a href="#" class="logo foot-logo" aria-label="Farus"><img src="assets/farus-logo.png" alt="Farus" /></a>
       <div class="foot-tag">
         guia no escuro
         <span class="closer">Construído em São Paulo. Para a cobrança brasileira que faltou.</span>
@@ -2089,13 +2407,24 @@
         <a href="#como">Como funciona</a>
         <a href="#diferencial">Diferencial</a>
         <a href="#seguranca">Segurança e compliance</a>
+        <a href="faq.html">Perguntas frequentes</a>
         <a href="privacidade.html">Privacidade</a>
         <a href="mailto:contato@farus.ai">Contato</a>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 Farus · [PREENCHER: razão social] · CNPJ [PREENCHER: CNPJ] · <a href="privacidade.html">Política de Privacidade</a></span>
-      <span><a href="mailto:contato@farus.ai">contato@farus.ai</a></span>
+      <span>© 2026 Farus · Farus Tecnologia Ltda · CNPJ 67.819.564/0001-21 · <a href="privacidade.html">Política de Privacidade</a></span>
+      <span class="foot-right">
+        <a href="mailto:contato@farus.ai">contato@farus.ai</a>
+        <span class="foot-social">
+          <a href="https://www.instagram.com/farus.ai" target="_blank" rel="noopener" aria-label="Instagram da Farus" title="Instagram">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.15" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/farus-ai" target="_blank" rel="noopener" aria-label="LinkedIn da Farus" title="LinkedIn">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.3c0-1.26-.02-2.9-1.95-2.9-1.95 0-2.25 1.4-2.25 2.8V21h-4z"/></svg>
+          </a>
+        </span>
+      </span>
     </div>
   </div>
 </footer>
@@ -2208,6 +2537,134 @@
     });
   })();
 
+  // ───────── agendar conversa (form modal) ─────────
+  (function(){
+    let lastFocused = null;
+    const encode = (data) => Object.keys(data)
+      .map(k => encodeURIComponent(k) + '=' + encodeURIComponent(data[k]))
+      .join('&');
+
+    function buildModal(){
+      const backdrop = document.createElement('div');
+      backdrop.className = 'dcn-backdrop';
+      backdrop.innerHTML = `
+        <div class="dcn-panel" role="dialog" aria-modal="true" aria-labelledby="agc-title">
+          <div class="dcn-eyebrow">
+            <span class="dcn-rule" aria-hidden="true"></span>
+            <span class="dcn-eyebrow-label">Agendar conversa</span>
+          </div>
+          <h2 id="agc-title" class="dcn-title">Vamos <em>conversar.</em></h2>
+          <p class="dcn-lead">Deixe seus dados que a gente entra em contato para marcar uma conversa sobre a sua operação.</p>
+          <form class="dcn-form" novalidate>
+            <p class="dcn-hp"><label>Não preencha: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+            <div class="dcn-field">
+              <label class="dcn-label" for="agc-name">Nome</label>
+              <input class="dcn-input" id="agc-name" name="name" type="text" placeholder="Seu nome" autocomplete="name" required>
+            </div>
+            <div class="dcn-field">
+              <label class="dcn-label" for="agc-email">E-mail</label>
+              <input class="dcn-input" id="agc-email" name="email" type="email" placeholder="voce@empresa.com" autocomplete="email" required>
+            </div>
+            <div class="dcn-field">
+              <label class="dcn-label" for="agc-empresa">Empresa</label>
+              <input class="dcn-input" id="agc-empresa" name="empresa" type="text" placeholder="Nome da empresa" autocomplete="organization" required>
+            </div>
+            <p class="dcn-error" role="alert" aria-live="polite"></p>
+            <div class="dcn-actions">
+              <button type="button" class="btn btn-ghost dcn-back">Voltar</button>
+              <button type="submit" class="btn btn-primary dcn-send">Enviar <span class="dcn-arrow" aria-hidden="true">→</span></button>
+            </div>
+          </form>
+        </div>`;
+      return backdrop;
+    }
+
+    function close(backdrop){
+      backdrop.remove();
+      document.removeEventListener('keydown', backdrop._onKey);
+      if (lastFocused && lastFocused.focus) lastFocused.focus();
+    }
+
+    function showSuccess(panel){
+      panel.innerHTML = `
+        <div class="dcn-success">
+          <div class="dcn-check" aria-hidden="true">✓</div>
+          <div class="dcn-eyebrow">
+            <span class="dcn-rule" aria-hidden="true"></span>
+            <span class="dcn-eyebrow-label">Recebido</span>
+          </div>
+          <h2 class="dcn-title">Recebemos seus dados.</h2>
+          <p class="dcn-lead">Em breve entramos em contato pelo e-mail informado para marcar a conversa.</p>
+          <div class="dcn-actions">
+            <button type="button" class="btn btn-primary dcn-close-ok">Fechar</button>
+          </div>
+        </div>`;
+    }
+
+    function open(){
+      lastFocused = document.activeElement;
+      const backdrop = buildModal();
+      document.body.appendChild(backdrop);
+
+      const panel = backdrop.querySelector('.dcn-panel');
+      const form = backdrop.querySelector('.dcn-form');
+      const backBtn = backdrop.querySelector('.dcn-back');
+      const sendBtn = backdrop.querySelector('.dcn-send');
+      const errEl = backdrop.querySelector('.dcn-error');
+
+      backBtn.addEventListener('click', () => close(backdrop));
+      backdrop.addEventListener('mousedown', (e) => { if (e.target === backdrop) close(backdrop); });
+      backdrop._onKey = (e) => { if (e.key === 'Escape') close(backdrop); };
+      document.addEventListener('keydown', backdrop._onKey);
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        errEl.textContent = '';
+        if (!form.checkValidity()){
+          errEl.textContent = 'Preencha nome, e-mail e empresa para continuar.';
+          form.reportValidity();
+          return;
+        }
+        const data = {
+          'form-name': 'agendar',
+          'name': form.name.value.trim(),
+          'email': form.email.value.trim(),
+          'empresa': form.empresa.value.trim(),
+          'bot-field': form['bot-field'].value
+        };
+        sendBtn.disabled = true;
+        sendBtn.textContent = 'Enviando…';
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: encode(data)
+        })
+        .then((res) => {
+          if (!res.ok) throw new Error('http ' + res.status);
+          showSuccess(panel);
+          const okBtn = panel.querySelector('.dcn-close-ok');
+          okBtn.addEventListener('click', () => close(backdrop));
+          okBtn.focus({ preventScroll: true });
+        })
+        .catch(() => {
+          sendBtn.disabled = false;
+          sendBtn.innerHTML = 'Enviar <span class="dcn-arrow" aria-hidden="true">→</span>';
+          errEl.textContent = 'Não foi possível enviar agora. Tente novamente ou escreva para contato@farus.ai.';
+        });
+      });
+
+      panel.scrollTop = 0;
+      backdrop.querySelector('#agc-name').focus({ preventScroll: true });
+    }
+
+    document.querySelectorAll('[data-agendar]').forEach(el => {
+      el.addEventListener('click', (e) => {
+        e.preventDefault();
+        open();
+      });
+    });
+  })();
+
   // trigger hand-drawn circle around "conversar" when final CTA enters view
   const finalSec = document.querySelector('.final');
   if (finalSec){
@@ -2223,6 +2680,5 @@
   }
 </script>
 
-
-
-</body></html>
+</body>
+</html>
