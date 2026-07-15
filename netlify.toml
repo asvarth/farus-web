@@ -1,0 +1,5 @@
+# Site estático da Farus (landing + faq + privacidade).
+# Sem etapa de build: publica os arquivos da raiz do repositório como estão.
+[build]
+  publish = "."
+  command = ""
