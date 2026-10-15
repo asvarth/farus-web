@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Como funciona · Farus</title>
+<meta name="description" content="Da carteira ao acordo fechado: as três camadas da Farus, o que você decide, os cinco passos da implantação e como o resultado de cada ligação volta para a sua operação.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://farus.ai/como-funciona.html">
+<link rel="icon" href="/favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+<meta name="theme-color" content="#E8DCC4">
+<style>
+  @font-face{ font-family:'Fraunces'; font-style:normal; font-weight:300 400; font-display:swap; src:url("fonts/fraunces-latin.woff2") format('woff2'); unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face{ font-family:'Fraunces'; font-style:italic; font-weight:300 400; font-display:swap; src:url("fonts/fraunces-italic-latin.woff2") format('woff2'); unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face{ font-family:'Inter Tight'; font-style:normal; font-weight:400 600; font-display:swap; src:url("fonts/inter-tight-latin.woff2") format('woff2'); unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+
+  :root{
+    --brown:#3D2E26; --cream:#E8DCC4; --cream-soft:#F1E8D4; --terracotta:#B85042;
+    --ink:#1F1612; --rule:rgba(61,46,38,.18); --rule-strong:rgba(61,46,38,.32);
+    --serif:"Fraunces","Iowan Old Style",Georgia,serif;
+    --sans:"Inter Tight","Inter",-apple-system,BlinkMacSystemFont,sans-serif;
+    --maxw:760px;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{ font-family:var(--sans); color:var(--brown); background:var(--cream); font-size:17px; line-height:1.65; -webkit-font-smoothing:antialiased; }
+  a{ color:inherit; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 24px; }
+
+  nav{ border-bottom:1px solid var(--rule); }
+  .nav-inner{ display:flex; justify-content:space-between; align-items:center; padding:18px 0; }
+  .logo img{ height:34px; display:block; }
+  .back{ font-size:14px; text-decoration:none; letter-spacing:.01em; }
+  .back:hover{ color:var(--terracotta); }
+
+  header.page{ padding:64px 0 36px; border-bottom:1px solid var(--rule); }
+  h1{ font-family:var(--serif); font-weight:300; font-size:clamp(34px,5vw,48px); line-height:1.1; color:var(--ink); margin:0 0 14px; letter-spacing:-0.01em; }
+  h1 em{ font-style:italic; color:var(--terracotta); }
+
+  main{ padding:32px 0 72px; }
+  p, li{ font-size:16.5px; }
+  .lead{ font-size:18px; margin:0 0 8px; }
+  .lead a{ text-decoration:underline; text-underline-offset:3px; }
+  .lead a:hover{ color:var(--terracotta); }
+
+  /* ── acordeão FAQ ── */
+  .faq{ margin:28px 0 0; }
+  .faq details{ border-bottom:1px solid var(--rule); }
+  .faq details:first-of-type{ border-top:1px solid var(--rule); }
+  .faq summary{
+    list-style:none; cursor:pointer; position:relative;
+    font-family:var(--serif); font-weight:400; font-size:21px; color:var(--ink);
+    letter-spacing:-0.01em; line-height:1.3;
+    padding:22px 44px 22px 0; margin:0;
+    transition:color .2s ease;
+  }
+  .faq summary::-webkit-details-marker{ display:none; }
+  .faq summary:hover{ color:var(--terracotta); }
+  .faq summary:focus-visible{ outline:2px solid var(--terracotta); outline-offset:3px; border-radius:2px; }
+  /* marcador + / × */
+  .faq summary::after{
+    content:"+"; position:absolute; right:4px; top:50%; transform:translateY(-50%);
+    font-family:var(--sans); font-weight:400; font-size:26px; line-height:1; color:var(--terracotta);
+    transition:transform .2s ease;
+  }
+  .faq details[open] summary::after{ content:"×"; }
+  .faq .answer{ padding:0 44px 24px 0; margin-top:-4px; }
+  .faq .answer p{ margin:0; opacity:.92; }
+
+  /* ── CTA (portado da LP) ── */
+  .cta{ margin:48px 0 0; padding:36px 0 0; border-top:1px solid var(--rule); }
+  .cta h2{ font-family:var(--serif); font-weight:400; font-size:24px; color:var(--ink); margin:0 0 8px; letter-spacing:-0.01em; }
+  .cta p{ margin:0 0 20px; opacity:.9; }
+  .cta-btns{ display:flex; gap:12px; flex-wrap:wrap; }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:13px 22px; border-radius:999px;
+    font-family:var(--sans); font-size:14.5px; font-weight:500; letter-spacing:-0.005em;
+    cursor:pointer; text-decoration:none; border:1px solid transparent;
+    transition:transform .25s ease, background-color .25s ease, color .25s ease, border-color .25s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{ background:var(--brown); color:var(--cream); }
+  .btn-primary:hover{ background:var(--terracotta); transform:translateY(-1px); }
+  .btn-ghost{ background:transparent; color:var(--brown); border-color:var(--rule-strong); }
+  .btn-ghost:hover{ background:var(--brown); color:var(--cream); border-color:var(--brown); transform:translateY(-1px); }
+  .btn:focus-visible{ outline:2px solid var(--terracotta); outline-offset:2px; }
+  .btn .arrow{ display:inline-block; transition:transform .25s ease; }
+  .btn:hover .arrow{ transform:translateX(3px); }
+
+  footer{ border-top:1px solid var(--rule); padding:32px 0 40px; }
+  .foot-bottom{ display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; font-size:12.5px; opacity:.75; letter-spacing:.01em; }
+  .foot-bottom a{ text-decoration:underline; text-underline-offset:3px; }
+  .foot-bottom a:hover{ color:var(--terracotta); }
+  @media (max-width:560px){
+    .foot-bottom{ flex-direction:column; align-items:flex-start; }
+    .faq summary{ font-size:19px; }
+    .cta-btns .btn{ width:100%; justify-content:center; }
+  }
+
+  /* ── páginas de detalhe ── */
+  h2{ font-family:var(--serif); font-weight:400; font-size:27px; color:var(--ink); margin:52px 0 6px; letter-spacing:-0.015em; line-height:1.2; }
+  h2.primeiro{ margin-top:36px; }
+  h2 em{ font-style:italic; color:var(--terracotta); }
+  h3{ font-family:var(--serif); font-weight:400; font-size:20px; color:var(--ink); margin:30px 0 4px; letter-spacing:-0.01em; }
+  main p{ margin:0 0 16px; }
+
+  .norma{ border-top:1px solid var(--rule); padding:22px 0 6px; }
+  .norma.ultima{ border-bottom:1px solid var(--rule); margin-bottom:8px; }
+  .norma .nome{ font-family:var(--serif); font-size:21px; color:var(--ink); letter-spacing:-0.01em; display:block; }
+  .norma .lei{ font-family:var(--sans); font-size:11.5px; font-weight:600; letter-spacing:.09em; text-transform:uppercase; color:var(--terracotta); display:block; margin:5px 0 12px; }
+  .norma p{ margin:0 0 12px; opacity:.92; }
+  .norma p:last-child{ margin-bottom:0; }
+
+  ol.passos{ counter-reset:pp; list-style:none; margin:24px 0 0; padding:0; }
+  ol.passos li{ counter-increment:pp; position:relative; padding:0 0 26px 40px; border-left:1px solid var(--rule); margin-left:12px; }
+  ol.passos li:last-child{ border-left-color:transparent; padding-bottom:4px; }
+  ol.passos li::before{
+    content:counter(pp,decimal-leading-zero);
+    position:absolute; left:-13px; top:-2px; width:26px; height:26px; border-radius:50%;
+    background:var(--cream); border:1px solid var(--rule-strong);
+    font-family:var(--serif); font-style:italic; font-size:12.5px; color:var(--terracotta);
+    display:flex; align-items:center; justify-content:center;
+  }
+  ol.passos h3{ margin:0 0 6px; font-size:19px; }
+  .quem{ font-family:var(--sans); font-size:10.5px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; border:1px solid var(--rule-strong); border-radius:999px; padding:3px 9px; margin-left:10px; opacity:.7; white-space:nowrap; }
+  ol.passos p{ margin:0; font-size:16px; opacity:.9; }
+
+  ul.limites{ list-style:none; margin:20px 0 0; padding:0; }
+  ul.limites li{ position:relative; padding:0 0 14px 26px; font-size:16.5px; opacity:.92; }
+  ul.limites li::before{ content:"—"; position:absolute; left:0; color:var(--terracotta); }
+  ul.limites li b{ font-weight:600; color:var(--ink); }
+
+  .nota{ border-left:2px solid var(--terracotta); padding:2px 0 2px 18px; margin:26px 0; }
+  .nota p{ margin:0; font-size:16px; opacity:.9; }
+
+  .outras{ margin:52px 0 0; padding:26px 0 0; border-top:1px solid var(--rule); display:flex; gap:26px; flex-wrap:wrap; font-size:15px; }
+  .outras a{ text-decoration:underline; text-underline-offset:3px; }
+  .outras a:hover{ color:var(--terracotta); }
+
+  @media (max-width:560px){
+    h2{ font-size:24px; }
+    .quem{ display:inline-block; margin:6px 0 0 0; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a href="/" class="logo" aria-label="Farus"><img src="assets/farus-logo.png" alt="Farus"></a>
+    <a href="/" class="back">← Voltar ao site</a>
+  </div>
+</nav>
+
+<header class="page">
+  <div class="wrap">
+    <h1>Como <em>funciona</em></h1>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <p class="lead">O caminho completo, da sua carteira até o acordo fechado: o que a Farus faz, o que fica do seu lado e quanto trabalho isso realmente dá para a sua operação.</p>
+
+    <h2 class="primeiro">A carteira entra de um lado. O <em>acordo</em> sai do outro.</h2>
+    <p>Entre uma coisa e outra existem três camadas, e elas rodam como um fluxo só.</p>
+
+    <h3>Captura</h3>
+    <p>Sua carteira entra de qualquer fonte: CRM, ERP, planilha ou integração direta pelo seu sistema. Não há lição de casa antes da primeira reunião, nada para separar ou reformatar. A carteira também não precisa de amostra prévia, porque a ligação de teste já valida se funciona.</p>
+
+    <h3>Fila</h3>
+    <p>Antes de discar, a carteira inteira entra na fila, da conta maior à menor. A ordem segue valor, atraso e janela legal, definidos por você, e nenhuma faixa fica de fora por ser pequena demais para um operador.</p>
+
+    <h3>Voz</h3>
+    <p>A Clara liga, confirma o titular, apresenta a pendência, ouve a situação e propõe uma alternativa em tempo real. Ela negocia dentro da política que você definiu e traz o acordo pronto. Régua de texto notifica e o devedor ignora; voz conversa e contrapropõe.</p>
+
+    <h2>O que é decisão sua, e o que é trabalho nosso</h2>
+    <p>A configuração da Clara para a sua operação sai de uma conversa de cerca de quinze minutos, organizada em cinco blocos. Cada bloco vira uma parte do comportamento dela:</p>
+    <ul class="limites">
+      <li><b>Identidade.</b> Em nome de quem ela liga, e se ela pode dizer que é uma inteligência artificial. Vira o script de abertura.</li>
+      <li><b>Negociação.</b> Até onde ela pode ir sozinha em desconto e parcelamento, e quais formas de pagamento você aceita. Vira o cérebro comercial.</li>
+      <li><b>Compliance.</b> Horário, tentativas por devedor, como ela confirma o titular e o que o seu jurídico proíbe. Vira os limites que ela nunca fura.</li>
+      <li><b>Depois do sim.</b> Para onde vai a proposta ou o boleto, e em que situação ela passa o caso para um humano do seu time.</li>
+      <li><b>Dados e retorno.</b> Como a carteira chega, quem gera o boleto ou o Pix e por qual canal você recebe o resultado de cada ligação.</li>
+    </ul>
+    <p>São decisões suas, e ficam no painel, versionadas por carteira. Transformar isso numa agente que respeita cada limite é trabalho nosso.</p>
+
+    <h2>Da conversa à primeira ligação, em cinco passos</h2>
+    <ol class="passos">
+      <li>
+        <h3>Reunião de operação<span class="quem">Farus conduz</span></h3>
+        <p>Preenchemos com você a ficha da sua operação. É conversa, não interrogatório: nós perguntamos e já sugerimos o que costuma funcionar.</p>
+      </li>
+      <li>
+        <h3>A carteira entra<span class="quem">Integração ou planilha</span></h3>
+        <p>Pela integração com o seu CRM ou ERP, nós puxamos a carteira direto. Se preferir, uma planilha resolve. Junto, o número de WhatsApp que envia a proposta e como o boleto ou o Pix é gerado.</p>
+      </li>
+      <li>
+        <h3>A régua é publicada<span class="quem">Você, no painel</span></h3>
+        <p>No painel você define desconto, parcelas, janela de contato, como confirmar a identidade e para onde vai a proposta. Publica uma versão, e cada mudança fica versionada. Na primeira vez, fazemos isso junto com você na reunião.</p>
+      </li>
+      <li>
+        <h3>Ligação de teste<span class="quem">Farus faz</span></h3>
+        <p>Alguém da Farus faz o papel de devedor e confere se ela respeita os limites combinados. Nenhum devedor real atende antes disso passar.</p>
+      </li>
+      <li>
+        <h3>Vai ao vivo<span class="quem">Farus faz</span></h3>
+        <p>A Clara liga na carteira real e o resultado volta pelo canal que você escolher: API, webhook, planilha ou o painel.</p>
+      </li>
+    </ol>
+    <div class="nota">
+      <p>Dois passos são seus: a carteira e a régua. O resto, reunião, ligação de teste e ir ao vivo, nós conduzimos com você.</p>
+    </div>
+
+    <h2>Depois do <em>sim</em></h2>
+    <p>Quando o devedor aceita, a Clara passa a proposta adiante pelo canal que você definiu, normalmente WhatsApp, com o boleto ou o Pix gerado do jeito que a sua operação já gera hoje. Nós não substituímos o seu meio de pagamento, nos conectamos a ele.</p>
+    <p>Casos fora da política, ou que pedem um olhar humano, não são decididos por ela: caem numa fila de revisão para o seu time, com a transcrição e o contexto do que aconteceu.</p>
+
+    <h2>Como o resultado volta</h2>
+    <p>Cada ligação vira registro: acordo fechado, promessa de pagamento, recusa ou não atendeu, com o que a Clara entendeu e o que o sistema decidiu. Esse retorno chega por API, webhook, planilha ou pelo painel, o que for melhor para o seu fluxo.</p>
+    <p>É o mesmo material que sustenta a auditoria descrita em <a href="seguranca.html">Segurança e compliance</a>.</p>
+
+    <div class="cta">
+      <h2 class="primeiro" style="margin-top:0">Quer ver funcionando?</h2>
+      <p>Ligue e converse com a Clara, ou marque uma conversa sobre a sua operação.</p>
+      <div class="cta-btns">
+        <a class="btn btn-primary" href="/#contato">Agendar conversa <span class="arrow">→</span></a>
+        <a class="btn btn-ghost" href="tel:+551150285068">Ligue e fale com a Clara</a>
+      </div>
+    </div>
+
+    <div class="outras"><a href="seguranca.html">Segurança e compliance →</a><a href="faq.html">Perguntas frequentes →</a><a href="/">Voltar à home →</a></div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot-bottom">
+    <span>© 2026 Farus · <a href="privacidade.html">Política de Privacidade</a></span>
+    <span><a href="mailto:contato@farus.ai">contato@farus.ai</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
